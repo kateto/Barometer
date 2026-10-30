@@ -1,40 +1,26 @@
-# American Higher Education Barometer website
+# American Higher Education Barometer
 
-Source for [edbarometer.org](https://edbarometer.org), a single static page served by GitHub Pages. There is no build step: what is in this folder is what gets published.
+The American Higher Education Barometer (AHEB) measures how Americans see colleges and universities: what they value, what concerns them, and how much they trust them. Reports and updates are published at [edbarometer.org](https://edbarometer.org).
 
-## Files
+## Report 01: Higher Education Public Opinion Analysis
 
-- `index.html` is the whole page.
-- `assets/css/style.css` holds all styles. Colors and fonts are set as variables at the top.
-- `assets/img/` holds the hero illustration (`cover.jpg`), the report thumbnail, the social-media preview image, and the favicon.
-- `assets/reports/` holds the report PDFs that the Download buttons link to.
-- `CNAME` tells GitHub Pages to serve the site at `edbarometer.org`.
-- `.nojekyll` turns off GitHub's Jekyll processing, which this site does not need.
+*Strong Support Amid Specific Vulnerabilities* (October 2025). [Download the report (PDF)](assets/reports/AHEB-Report-01-Higher-Education-Attitudes.pdf).
 
-## Adding a new report
+A majority of the American public recognizes the value of universities and opposes federal funding cuts. However, they also express concern about campus issues, including costs and free speech. Communications can emphasize higher education's highly valued contributions while distinctly acknowledging strategies to address concerns.
 
-1. Put the PDF in `assets/reports/`, using a name without spaces.
-2. Save a thumbnail of its first page in `assets/img/` (about 560 px wide).
-3. In `index.html`, update the "Latest Report" section and the hero's Download Report link. To keep older reports listed, copy the `.report` block and place the older one below it.
+### Key findings
 
-## Publishing on GitHub Pages
+- **Higher education is seen as crucial across key domains.** Most Americans say universities are important for technology (91%), science (90%), healthcare (83%), economic growth (83%), and democracy (72%).
+- **There is strong support for funding scientific and medical research.** Federal cuts to science, health research, and education funding are opposed by 64% to 70% of Americans, roughly four or five times the share who support them.
+- **There is strong opposition to government policies affecting universities.** Freezing research grants, threatening universities' tax-exempt status, and political review of classes or faculty all draw about twice as much disapproval as approval.
+- **Higher education faces significant vulnerabilities with respect to campus climate.** 87% are concerned about tuition costs and student debt, 78% to 86% about racism, antisemitism, or Islamophobia on campus, 84% about campus free speech, 77% about liberal bias, and 74% about transgender athletes in women's sports.
+- **There is relatively strong overall approval of higher education.** 59% of Americans approve of universities in the United States, including majorities of Democrats (73%), Republicans (52%), and Independents (54%), and a majority in every state.
+- **Trust in colleges and universities is high, especially relative to other institutions.** 75% trust them at least "some", ranking them 4th of 20 institutions, behind only hospitals and doctors, the military, and scientists.
 
-1. Push this folder's contents to the root of a GitHub repository's `main` branch.
-2. In the repository, open Settings, then Pages. Under "Build and deployment", choose "Deploy from a branch", branch `main`, folder `/ (root)`.
-3. In the same Pages settings, enter `edbarometer.org` as the custom domain and, once the certificate is issued, tick "Enforce HTTPS".
+## About the survey
 
-## Pointing the domain at GitHub
+Between July 3, 2025, and August 1, 2025, we collected a total of 31,891 responses from individuals age 18 and older across all 50 states plus the District of Columbia. The surveys were conducted by PureSpectrum via an online, nonprobability sample, with state-level representative quotas for race/ethnicity, age, and gender. In addition to balancing on these dimensions, we reweighted our data using demographic characteristics to match the U.S. population with respect to 2020 vote choice and turnout, race/ethnicity, age, gender, education, and living in urban, suburban, or rural areas.
 
-At the domain registrar's DNS settings for `edbarometer.org`:
+## This repository
 
-| Type | Host | Value |
-|---|---|---|
-| A | @ | 185.199.108.153 |
-| A | @ | 185.199.109.153 |
-| A | @ | 185.199.110.153 |
-| A | @ | 185.199.111.153 |
-| CNAME | www | `<github-username>.github.io` |
-
-Remove any existing A records, forwarding, or website-builder records for `@` and `www` first. DNS changes can take up to a day to spread. GitHub's own instructions are at <https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site>.
-
-Because of the `CNAME` file, the `github.io` address redirects to `edbarometer.org`. Until the DNS change above is made, that means the GitHub address shows whatever the domain currently points to. To preview the site on GitHub before switching the domain, leave the `CNAME` file out of the first push and add it when the DNS is ready.
+This repository holds the edbarometer.org website and the published reports.
